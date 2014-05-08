@@ -18,6 +18,10 @@ buildscript {
 }
 
 
+
+project(":sample-web"){
+    
+
 apply plugin: 'war'
 apply plugin: 'eclipse'
 apply plugin: 'idea'
@@ -37,4 +41,5 @@ dependencies {
     compile("org.springframework.boot:spring-boot-starter-web:${springBootVersion}")
     compile("org.hibernate:hibernate-validator")
     testCompile("org.springframework.boot:spring-boot-starter-test")
+}
 }
