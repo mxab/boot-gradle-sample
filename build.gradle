@@ -38,3 +38,31 @@ dependencies {
     compile("org.hibernate:hibernate-validator")
     testCompile("org.springframework.boot:spring-boot-starter-test")
 }
+
+
+project(":sample-web"){
+
+
+
+apply plugin: 'war'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'spring-boot'
+
+
+repositories {
+    // NOTE: You should declare only repositories that you need here
+    //mavenLocal()
+    mavenCentral()
+    maven { url "http://repo.spring.io/release" }
+    //maven { url "http://repo.spring.io/milestone" }
+    //maven { url "http://repo.spring.io/snapshot" }
+}
+
+dependencies {
+    compile("org.springframework.boot:spring-boot-starter-web:${springBootVersion}")
+    compile("org.hibernate:hibernate-validator")
+    testCompile("org.springframework.boot:spring-boot-starter-test")
+}
+
+}
